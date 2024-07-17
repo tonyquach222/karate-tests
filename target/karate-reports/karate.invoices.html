@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("7700cdc2-943a-4ae1-b319-6af2de938898",{name:"tonyquach"});
+    posthog.capture("report_feature",{karate_version:"1.3.0",karate_meta:null});
+  }
+});
+</script>
+
+    <title>karate.invoices</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2024-07-17 02:08:00 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:6]"><span>[1:6]</span> <span>Get all invoices</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">karate/invoices.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Invoices API</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:6]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:6]</span>
+                <span class="scenario-name">Get all invoices</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:6]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:6]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>url karate.config.baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">14:08:00.019 classpath:karate/invoices.feature:4
+* url karate.config.baseUrl
+&gt;&gt; classpath:karate/invoices.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var config = {
+03:       baseUrl: &#39;https://invoices-rpis.finance-test.cfadevelop.com/&#39;,
+04:       apiEnvironment: &#39;dev&#39;,
+05:       oktaScopes: &#39;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&#39;
+06:   };
+07: 
+08:   karate.log(&#39;Initial config:&#39;, config);
+09: 
+10:   function execCommand(command) {
+11:       var proc = java.lang.Runtime.getRuntime().exec(command);
+12:       proc.waitFor();
+13:       var reader = new java.io.BufferedReader(new java.io.InputStreamReader(proc.getInputStream()));
+14:       var line = &#39;&#39;;
+15:       var output = &#39;&#39;;
+16:       while ((line = reader.readLine()) != null) {
+17:           output += line;
+18:       }
+19:       return output;
+20:   }
+21: 
+22:   var secretName = config.apiEnvironment + &#39;-ots-rpis-xp-api-okta&#39;;
+23:   var command = &#39;aws secretsmanager get-secret-value --secret-id &#39; + secretName + &#39; --query SecretString --output text&#39;;
+24:   karate.log(&#39;Executing command:&#39;, command);
+25: 
+26:   var oktaCredsJson = execCommand(command);
+27:   karate.log(&#39;Okta credentials JSON:&#39;, oktaCredsJson);
+28: 
+29:   if (!oktaCredsJson) {
+30:       karate.log(&#39;Failed to retrieve Okta secrets from Secrets Manager&#39;);
+31:       throw &#39;Failed to retrieve Okta secrets&#39;;
+32:   }
+33: 
+34:   var oktaCreds = JSON.parse(oktaCredsJson);
+35:   karate.log(&#39;Parsed Okta credentials:&#39;, oktaCreds);
+36: 
+37:   var oktaClientId = oktaCreds[&#39;okta-client-id&#39;];
+38:   var oktaClientSecret = oktaCreds[&#39;okta-client-secret&#39;];
+39:   var oktaTokenUrl = oktaCreds[&#39;okta-token-url&#39;];
+40: 
+41:   var basicAuth = java.util.Base64.getEncoder().encodeToString((oktaClientId + &#39;:&#39; + oktaClientSecret).getBytes(&#39;utf-8&#39;));
+42:   karate.log(&#39;Basic Auth header:&#39;, basicAuth);
+43: 
+44:   var tokenResponse = karate.call(&#39;classpath:karate/okta-auth.feature&#39;, {
+45:       basicAuth: basicAuth,
+46:       oktaTokenUrl: oktaTokenUrl,
+47:       oktaScopes: config.oktaScopes
+48:   });
+49:   karate.log(&#39;Token response:&#39;, tokenResponse);
+50: 
+51:   if (!tokenResponse || !tokenResponse.access_token) {
+52:       karate.log(&#39;Failed to get access token from Okta&#39;);
+53:       throw &#39;Failed to get access token from Okta&#39;;
+54:   }
+55: 
+56:   config.accessToken = tokenResponse.access_token;
+57:   karate.log(&#39;Access token:&#39;, config.accessToken);
+58: 
+59:   karate.configure(&#39;httpClientInstance&#39;, { readTimeout: 60000 });
+60: 
+61:   return config;
+62: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:215)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:1951)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1849)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- &lt;js&gt;.fn(Unnamed:44)
+
+classpath:karate/invoices.feature:4
+</div>   
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.4.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">karate.okta-auth</div>
+      </div>
+      <div class="time-cell passed">101</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.4">
+      <div class="step-ref bg-step">4</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def basicAuth = karate.properties[&#39;basicAuth&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.4">14:07:59.269 Initial config: {
+  &quot;baseUrl&quot;: &quot;https://invoices-rpis.finance-test.cfadevelop.com/&quot;,
+  &quot;apiEnvironment&quot;: &quot;dev&quot;,
+  &quot;oktaScopes&quot;: &quot;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&quot;
+}
+ 
+14:07:59.270 Executing command: aws secretsmanager get-secret-value --secret-id dev-ots-rpis-xp-api-okta --query SecretString --output text 
+14:07:59.893 Okta credentials JSON: {&quot;okta-client-id&quot;:&quot;0oa1opcdcvgQ4unhU0h8&quot;,&quot;okta-client-secret&quot;:&quot;6YYxl21uP_1HBwvg0pyqMgGXUIIJIVpMvrty5yj38-32gQTlTdk5IU-HVVhh3NZq&quot;} 
+14:07:59.896 Parsed Okta credentials: {
+  &quot;okta-client-id&quot;: &quot;0oa1opcdcvgQ4unhU0h8&quot;,
+  &quot;okta-client-secret&quot;: &quot;6YYxl21uP_1HBwvg0pyqMgGXUIIJIVpMvrty5yj38-32gQTlTdk5IU-HVVhh3NZq&quot;
+}
+ 
+14:07:59.900 Basic Auth header: MG9hMW9wY2RjdmdRNHVuaFUwaDg6NllZeGwyMXVQXzFIQnd2ZzBweXFNZ0dYVUlJSklWcE12cnR5NXlqMzgtMzJnUVRsVGRrNUlVLUhWVmhoM05acQ== 
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.5">
+      <div class="step-ref bg-step">5</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def oktaTokenUrl = karate.properties[&#39;oktaTokenUrl&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def oktaScopes = karate.properties[&#39;oktaScopes&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.9">
+      <div class="step-ref bg-step">9</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url oktaTokenUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.10">
+      <div class="step-ref bg-step">10</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request { grant_type: &#39;client_credentials&#39;, scope: oktaScopes }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.11">
+      <div class="step-ref bg-step">11</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Basic &#39; + basicAuth</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.12">
+      <div class="step-ref bg-step">12</div>
+      <div class="step-indent"></div>
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell failed">89</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.12">14:08:00.014 org.apache.http.ProtocolException: Target host is not specified, http call failed after 72 milliseconds for url: 
+14:08:00.014 classpath:karate/okta-auth.feature:12
+When method POST
+http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>def access_token = response.access_token</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref failed">7</div>
+      
+      <div class="step-cell failed">
+        <span>Given</span>&nbsp;<span>path &#39;api/invoices&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.7">14:08:00.019 classpath:karate/invoices.feature:7
+Given path &#39;api/invoices&#39;
+&gt;&gt; classpath:karate/invoices.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var config = {
+03:       baseUrl: &#39;https://invoices-rpis.finance-test.cfadevelop.com/&#39;,
+04:       apiEnvironment: &#39;dev&#39;,
+05:       oktaScopes: &#39;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&#39;
+06:   };
+07: 
+08:   karate.log(&#39;Initial config:&#39;, config);
+09: 
+10:   function execCommand(command) {
+11:       var proc = java.lang.Runtime.getRuntime().exec(command);
+12:       proc.waitFor();
+13:       var reader = new java.io.BufferedReader(new java.io.InputStreamReader(proc.getInputStream()));
+14:       var line = &#39;&#39;;
+15:       var output = &#39;&#39;;
+16:       while ((line = reader.readLine()) != null) {
+17:           output += line;
+18:       }
+19:       return output;
+20:   }
+21: 
+22:   var secretName = config.apiEnvironment + &#39;-ots-rpis-xp-api-okta&#39;;
+23:   var command = &#39;aws secretsmanager get-secret-value --secret-id &#39; + secretName + &#39; --query SecretString --output text&#39;;
+24:   karate.log(&#39;Executing command:&#39;, command);
+25: 
+26:   var oktaCredsJson = execCommand(command);
+27:   karate.log(&#39;Okta credentials JSON:&#39;, oktaCredsJson);
+28: 
+29:   if (!oktaCredsJson) {
+30:       karate.log(&#39;Failed to retrieve Okta secrets from Secrets Manager&#39;);
+31:       throw &#39;Failed to retrieve Okta secrets&#39;;
+32:   }
+33: 
+34:   var oktaCreds = JSON.parse(oktaCredsJson);
+35:   karate.log(&#39;Parsed Okta credentials:&#39;, oktaCreds);
+36: 
+37:   var oktaClientId = oktaCreds[&#39;okta-client-id&#39;];
+38:   var oktaClientSecret = oktaCreds[&#39;okta-client-secret&#39;];
+39:   var oktaTokenUrl = oktaCreds[&#39;okta-token-url&#39;];
+40: 
+41:   var basicAuth = java.util.Base64.getEncoder().encodeToString((oktaClientId + &#39;:&#39; + oktaClientSecret).getBytes(&#39;utf-8&#39;));
+42:   karate.log(&#39;Basic Auth header:&#39;, basicAuth);
+43: 
+44:   var tokenResponse = karate.call(&#39;classpath:karate/okta-auth.feature&#39;, {
+45:       basicAuth: basicAuth,
+46:       oktaTokenUrl: oktaTokenUrl,
+47:       oktaScopes: config.oktaScopes
+48:   });
+49:   karate.log(&#39;Token response:&#39;, tokenResponse);
+50: 
+51:   if (!tokenResponse || !tokenResponse.access_token) {
+52:       karate.log(&#39;Failed to get access token from Okta&#39;);
+53:       throw &#39;Failed to get access token from Okta&#39;;
+54:   }
+55: 
+56:   config.accessToken = tokenResponse.access_token;
+57:   karate.log(&#39;Access token:&#39;, config.accessToken);
+58: 
+59:   karate.configure(&#39;httpClientInstance&#39;, { readTimeout: 60000 });
+60: 
+61:   return config;
+62: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:215)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:1951)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1849)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- &lt;js&gt;.fn(Unnamed:44)
+
+classpath:karate/invoices.feature:4
+classpath:karate/invoices.feature:7
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref failed">8</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.8">14:08:00.019 classpath:karate/invoices.feature:8
+When method get
+&gt;&gt; classpath:karate/invoices.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var config = {
+03:       baseUrl: &#39;https://invoices-rpis.finance-test.cfadevelop.com/&#39;,
+04:       apiEnvironment: &#39;dev&#39;,
+05:       oktaScopes: &#39;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&#39;
+06:   };
+07: 
+08:   karate.log(&#39;Initial config:&#39;, config);
+09: 
+10:   function execCommand(command) {
+11:       var proc = java.lang.Runtime.getRuntime().exec(command);
+12:       proc.waitFor();
+13:       var reader = new java.io.BufferedReader(new java.io.InputStreamReader(proc.getInputStream()));
+14:       var line = &#39;&#39;;
+15:       var output = &#39;&#39;;
+16:       while ((line = reader.readLine()) != null) {
+17:           output += line;
+18:       }
+19:       return output;
+20:   }
+21: 
+22:   var secretName = config.apiEnvironment + &#39;-ots-rpis-xp-api-okta&#39;;
+23:   var command = &#39;aws secretsmanager get-secret-value --secret-id &#39; + secretName + &#39; --query SecretString --output text&#39;;
+24:   karate.log(&#39;Executing command:&#39;, command);
+25: 
+26:   var oktaCredsJson = execCommand(command);
+27:   karate.log(&#39;Okta credentials JSON:&#39;, oktaCredsJson);
+28: 
+29:   if (!oktaCredsJson) {
+30:       karate.log(&#39;Failed to retrieve Okta secrets from Secrets Manager&#39;);
+31:       throw &#39;Failed to retrieve Okta secrets&#39;;
+32:   }
+33: 
+34:   var oktaCreds = JSON.parse(oktaCredsJson);
+35:   karate.log(&#39;Parsed Okta credentials:&#39;, oktaCreds);
+36: 
+37:   var oktaClientId = oktaCreds[&#39;okta-client-id&#39;];
+38:   var oktaClientSecret = oktaCreds[&#39;okta-client-secret&#39;];
+39:   var oktaTokenUrl = oktaCreds[&#39;okta-token-url&#39;];
+40: 
+41:   var basicAuth = java.util.Base64.getEncoder().encodeToString((oktaClientId + &#39;:&#39; + oktaClientSecret).getBytes(&#39;utf-8&#39;));
+42:   karate.log(&#39;Basic Auth header:&#39;, basicAuth);
+43: 
+44:   var tokenResponse = karate.call(&#39;classpath:karate/okta-auth.feature&#39;, {
+45:       basicAuth: basicAuth,
+46:       oktaTokenUrl: oktaTokenUrl,
+47:       oktaScopes: config.oktaScopes
+48:   });
+49:   karate.log(&#39;Token response:&#39;, tokenResponse);
+50: 
+51:   if (!tokenResponse || !tokenResponse.access_token) {
+52:       karate.log(&#39;Failed to get access token from Okta&#39;);
+53:       throw &#39;Failed to get access token from Okta&#39;;
+54:   }
+55: 
+56:   config.accessToken = tokenResponse.access_token;
+57:   karate.log(&#39;Access token:&#39;, config.accessToken);
+58: 
+59:   karate.configure(&#39;httpClientInstance&#39;, { readTimeout: 60000 });
+60: 
+61:   return config;
+62: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:215)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:1951)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1849)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- &lt;js&gt;.fn(Unnamed:44)
+
+classpath:karate/invoices.feature:4
+classpath:karate/invoices.feature:7
+classpath:karate/invoices.feature:8
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref failed">9</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">14:08:00.019 classpath:karate/invoices.feature:9
+Then status 200
+&gt;&gt; classpath:karate/invoices.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var config = {
+03:       baseUrl: &#39;https://invoices-rpis.finance-test.cfadevelop.com/&#39;,
+04:       apiEnvironment: &#39;dev&#39;,
+05:       oktaScopes: &#39;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&#39;
+06:   };
+07: 
+08:   karate.log(&#39;Initial config:&#39;, config);
+09: 
+10:   function execCommand(command) {
+11:       var proc = java.lang.Runtime.getRuntime().exec(command);
+12:       proc.waitFor();
+13:       var reader = new java.io.BufferedReader(new java.io.InputStreamReader(proc.getInputStream()));
+14:       var line = &#39;&#39;;
+15:       var output = &#39;&#39;;
+16:       while ((line = reader.readLine()) != null) {
+17:           output += line;
+18:       }
+19:       return output;
+20:   }
+21: 
+22:   var secretName = config.apiEnvironment + &#39;-ots-rpis-xp-api-okta&#39;;
+23:   var command = &#39;aws secretsmanager get-secret-value --secret-id &#39; + secretName + &#39; --query SecretString --output text&#39;;
+24:   karate.log(&#39;Executing command:&#39;, command);
+25: 
+26:   var oktaCredsJson = execCommand(command);
+27:   karate.log(&#39;Okta credentials JSON:&#39;, oktaCredsJson);
+28: 
+29:   if (!oktaCredsJson) {
+30:       karate.log(&#39;Failed to retrieve Okta secrets from Secrets Manager&#39;);
+31:       throw &#39;Failed to retrieve Okta secrets&#39;;
+32:   }
+33: 
+34:   var oktaCreds = JSON.parse(oktaCredsJson);
+35:   karate.log(&#39;Parsed Okta credentials:&#39;, oktaCreds);
+36: 
+37:   var oktaClientId = oktaCreds[&#39;okta-client-id&#39;];
+38:   var oktaClientSecret = oktaCreds[&#39;okta-client-secret&#39;];
+39:   var oktaTokenUrl = oktaCreds[&#39;okta-token-url&#39;];
+40: 
+41:   var basicAuth = java.util.Base64.getEncoder().encodeToString((oktaClientId + &#39;:&#39; + oktaClientSecret).getBytes(&#39;utf-8&#39;));
+42:   karate.log(&#39;Basic Auth header:&#39;, basicAuth);
+43: 
+44:   var tokenResponse = karate.call(&#39;classpath:karate/okta-auth.feature&#39;, {
+45:       basicAuth: basicAuth,
+46:       oktaTokenUrl: oktaTokenUrl,
+47:       oktaScopes: config.oktaScopes
+48:   });
+49:   karate.log(&#39;Token response:&#39;, tokenResponse);
+50: 
+51:   if (!tokenResponse || !tokenResponse.access_token) {
+52:       karate.log(&#39;Failed to get access token from Okta&#39;);
+53:       throw &#39;Failed to get access token from Okta&#39;;
+54:   }
+55: 
+56:   config.accessToken = tokenResponse.access_token;
+57:   karate.log(&#39;Access token:&#39;, config.accessToken);
+58: 
+59:   karate.configure(&#39;httpClientInstance&#39;, { readTimeout: 60000 });
+60: 
+61:   return config;
+62: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:215)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:1951)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1849)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- &lt;js&gt;.fn(Unnamed:44)
+
+classpath:karate/invoices.feature:4
+classpath:karate/invoices.feature:7
+classpath:karate/invoices.feature:8
+classpath:karate/invoices.feature:9
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref failed">10</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>print &#39;Response:&#39;, response</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">14:08:00.020 classpath:karate/invoices.feature:10
+And print &#39;Response:&#39;, response
+&gt;&gt; classpath:karate/invoices.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var config = {
+03:       baseUrl: &#39;https://invoices-rpis.finance-test.cfadevelop.com/&#39;,
+04:       apiEnvironment: &#39;dev&#39;,
+05:       oktaScopes: &#39;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&#39;
+06:   };
+07: 
+08:   karate.log(&#39;Initial config:&#39;, config);
+09: 
+10:   function execCommand(command) {
+11:       var proc = java.lang.Runtime.getRuntime().exec(command);
+12:       proc.waitFor();
+13:       var reader = new java.io.BufferedReader(new java.io.InputStreamReader(proc.getInputStream()));
+14:       var line = &#39;&#39;;
+15:       var output = &#39;&#39;;
+16:       while ((line = reader.readLine()) != null) {
+17:           output += line;
+18:       }
+19:       return output;
+20:   }
+21: 
+22:   var secretName = config.apiEnvironment + &#39;-ots-rpis-xp-api-okta&#39;;
+23:   var command = &#39;aws secretsmanager get-secret-value --secret-id &#39; + secretName + &#39; --query SecretString --output text&#39;;
+24:   karate.log(&#39;Executing command:&#39;, command);
+25: 
+26:   var oktaCredsJson = execCommand(command);
+27:   karate.log(&#39;Okta credentials JSON:&#39;, oktaCredsJson);
+28: 
+29:   if (!oktaCredsJson) {
+30:       karate.log(&#39;Failed to retrieve Okta secrets from Secrets Manager&#39;);
+31:       throw &#39;Failed to retrieve Okta secrets&#39;;
+32:   }
+33: 
+34:   var oktaCreds = JSON.parse(oktaCredsJson);
+35:   karate.log(&#39;Parsed Okta credentials:&#39;, oktaCreds);
+36: 
+37:   var oktaClientId = oktaCreds[&#39;okta-client-id&#39;];
+38:   var oktaClientSecret = oktaCreds[&#39;okta-client-secret&#39;];
+39:   var oktaTokenUrl = oktaCreds[&#39;okta-token-url&#39;];
+40: 
+41:   var basicAuth = java.util.Base64.getEncoder().encodeToString((oktaClientId + &#39;:&#39; + oktaClientSecret).getBytes(&#39;utf-8&#39;));
+42:   karate.log(&#39;Basic Auth header:&#39;, basicAuth);
+43: 
+44:   var tokenResponse = karate.call(&#39;classpath:karate/okta-auth.feature&#39;, {
+45:       basicAuth: basicAuth,
+46:       oktaTokenUrl: oktaTokenUrl,
+47:       oktaScopes: config.oktaScopes
+48:   });
+49:   karate.log(&#39;Token response:&#39;, tokenResponse);
+50: 
+51:   if (!tokenResponse || !tokenResponse.access_token) {
+52:       karate.log(&#39;Failed to get access token from Okta&#39;);
+53:       throw &#39;Failed to get access token from Okta&#39;;
+54:   }
+55: 
+56:   config.accessToken = tokenResponse.access_token;
+57:   karate.log(&#39;Access token:&#39;, config.accessToken);
+58: 
+59:   karate.configure(&#39;httpClientInstance&#39;, { readTimeout: 60000 });
+60: 
+61:   return config;
+62: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:215)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:1951)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1849)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- &lt;js&gt;.fn(Unnamed:44)
+
+classpath:karate/invoices.feature:4
+classpath:karate/invoices.feature:7
+classpath:karate/invoices.feature:8
+classpath:karate/invoices.feature:9
+classpath:karate/invoices.feature:10
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref failed">11</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>assert response != null</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">14:08:00.020 classpath:karate/invoices.feature:11
+And assert response != null
+&gt;&gt; classpath:karate/invoices.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var config = {
+03:       baseUrl: &#39;https://invoices-rpis.finance-test.cfadevelop.com/&#39;,
+04:       apiEnvironment: &#39;dev&#39;,
+05:       oktaScopes: &#39;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&#39;
+06:   };
+07: 
+08:   karate.log(&#39;Initial config:&#39;, config);
+09: 
+10:   function execCommand(command) {
+11:       var proc = java.lang.Runtime.getRuntime().exec(command);
+12:       proc.waitFor();
+13:       var reader = new java.io.BufferedReader(new java.io.InputStreamReader(proc.getInputStream()));
+14:       var line = &#39;&#39;;
+15:       var output = &#39;&#39;;
+16:       while ((line = reader.readLine()) != null) {
+17:           output += line;
+18:       }
+19:       return output;
+20:   }
+21: 
+22:   var secretName = config.apiEnvironment + &#39;-ots-rpis-xp-api-okta&#39;;
+23:   var command = &#39;aws secretsmanager get-secret-value --secret-id &#39; + secretName + &#39; --query SecretString --output text&#39;;
+24:   karate.log(&#39;Executing command:&#39;, command);
+25: 
+26:   var oktaCredsJson = execCommand(command);
+27:   karate.log(&#39;Okta credentials JSON:&#39;, oktaCredsJson);
+28: 
+29:   if (!oktaCredsJson) {
+30:       karate.log(&#39;Failed to retrieve Okta secrets from Secrets Manager&#39;);
+31:       throw &#39;Failed to retrieve Okta secrets&#39;;
+32:   }
+33: 
+34:   var oktaCreds = JSON.parse(oktaCredsJson);
+35:   karate.log(&#39;Parsed Okta credentials:&#39;, oktaCreds);
+36: 
+37:   var oktaClientId = oktaCreds[&#39;okta-client-id&#39;];
+38:   var oktaClientSecret = oktaCreds[&#39;okta-client-secret&#39;];
+39:   var oktaTokenUrl = oktaCreds[&#39;okta-token-url&#39;];
+40: 
+41:   var basicAuth = java.util.Base64.getEncoder().encodeToString((oktaClientId + &#39;:&#39; + oktaClientSecret).getBytes(&#39;utf-8&#39;));
+42:   karate.log(&#39;Basic Auth header:&#39;, basicAuth);
+43: 
+44:   var tokenResponse = karate.call(&#39;classpath:karate/okta-auth.feature&#39;, {
+45:       basicAuth: basicAuth,
+46:       oktaTokenUrl: oktaTokenUrl,
+47:       oktaScopes: config.oktaScopes
+48:   });
+49:   karate.log(&#39;Token response:&#39;, tokenResponse);
+50: 
+51:   if (!tokenResponse || !tokenResponse.access_token) {
+52:       karate.log(&#39;Failed to get access token from Okta&#39;);
+53:       throw &#39;Failed to get access token from Okta&#39;;
+54:   }
+55: 
+56:   config.accessToken = tokenResponse.access_token;
+57:   karate.log(&#39;Access token:&#39;, config.accessToken);
+58: 
+59:   karate.configure(&#39;httpClientInstance&#39;, { readTimeout: 60000 });
+60: 
+61:   return config;
+62: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:215)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:1951)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1849)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- &lt;js&gt;.fn(Unnamed:44)
+
+classpath:karate/invoices.feature:4
+classpath:karate/invoices.feature:7
+classpath:karate/invoices.feature:8
+classpath:karate/invoices.feature:9
+classpath:karate/invoices.feature:10
+classpath:karate/invoices.feature:11
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref failed">12</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>assert response.length &gt; 0</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.12">14:08:00.020 classpath:karate/invoices.feature:12
+And assert response.length &gt; 0
+&gt;&gt; classpath:karate/invoices.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var config = {
+03:       baseUrl: &#39;https://invoices-rpis.finance-test.cfadevelop.com/&#39;,
+04:       apiEnvironment: &#39;dev&#39;,
+05:       oktaScopes: &#39;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&#39;
+06:   };
+07: 
+08:   karate.log(&#39;Initial config:&#39;, config);
+09: 
+10:   function execCommand(command) {
+11:       var proc = java.lang.Runtime.getRuntime().exec(command);
+12:       proc.waitFor();
+13:       var reader = new java.io.BufferedReader(new java.io.InputStreamReader(proc.getInputStream()));
+14:       var line = &#39;&#39;;
+15:       var output = &#39;&#39;;
+16:       while ((line = reader.readLine()) != null) {
+17:           output += line;
+18:       }
+19:       return output;
+20:   }
+21: 
+22:   var secretName = config.apiEnvironment + &#39;-ots-rpis-xp-api-okta&#39;;
+23:   var command = &#39;aws secretsmanager get-secret-value --secret-id &#39; + secretName + &#39; --query SecretString --output text&#39;;
+24:   karate.log(&#39;Executing command:&#39;, command);
+25: 
+26:   var oktaCredsJson = execCommand(command);
+27:   karate.log(&#39;Okta credentials JSON:&#39;, oktaCredsJson);
+28: 
+29:   if (!oktaCredsJson) {
+30:       karate.log(&#39;Failed to retrieve Okta secrets from Secrets Manager&#39;);
+31:       throw &#39;Failed to retrieve Okta secrets&#39;;
+32:   }
+33: 
+34:   var oktaCreds = JSON.parse(oktaCredsJson);
+35:   karate.log(&#39;Parsed Okta credentials:&#39;, oktaCreds);
+36: 
+37:   var oktaClientId = oktaCreds[&#39;okta-client-id&#39;];
+38:   var oktaClientSecret = oktaCreds[&#39;okta-client-secret&#39;];
+39:   var oktaTokenUrl = oktaCreds[&#39;okta-token-url&#39;];
+40: 
+41:   var basicAuth = java.util.Base64.getEncoder().encodeToString((oktaClientId + &#39;:&#39; + oktaClientSecret).getBytes(&#39;utf-8&#39;));
+42:   karate.log(&#39;Basic Auth header:&#39;, basicAuth);
+43: 
+44:   var tokenResponse = karate.call(&#39;classpath:karate/okta-auth.feature&#39;, {
+45:       basicAuth: basicAuth,
+46:       oktaTokenUrl: oktaTokenUrl,
+47:       oktaScopes: config.oktaScopes
+48:   });
+49:   karate.log(&#39;Token response:&#39;, tokenResponse);
+50: 
+51:   if (!tokenResponse || !tokenResponse.access_token) {
+52:       karate.log(&#39;Failed to get access token from Okta&#39;);
+53:       throw &#39;Failed to get access token from Okta&#39;;
+54:   }
+55: 
+56:   config.accessToken = tokenResponse.access_token;
+57:   karate.log(&#39;Access token:&#39;, config.accessToken);
+58: 
+59:   karate.configure(&#39;httpClientInstance&#39;, { readTimeout: 60000 });
+60: 
+61:   return config;
+62: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:215)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:1951)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1849)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- &lt;js&gt;.fn(Unnamed:44)
+
+classpath:karate/invoices.feature:4
+classpath:karate/invoices.feature:7
+classpath:karate/invoices.feature:8
+classpath:karate/invoices.feature:9
+classpath:karate/invoices.feature:10
+classpath:karate/invoices.feature:11
+classpath:karate/invoices.feature:12
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref failed">13</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>match response[0].id == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">14:08:00.021 classpath:karate/invoices.feature:13
+* match response[0].id == &#39;#string&#39;
+&gt;&gt; classpath:karate/invoices.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var config = {
+03:       baseUrl: &#39;https://invoices-rpis.finance-test.cfadevelop.com/&#39;,
+04:       apiEnvironment: &#39;dev&#39;,
+05:       oktaScopes: &#39;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&#39;
+06:   };
+07: 
+08:   karate.log(&#39;Initial config:&#39;, config);
+09: 
+10:   function execCommand(command) {
+11:       var proc = java.lang.Runtime.getRuntime().exec(command);
+12:       proc.waitFor();
+13:       var reader = new java.io.BufferedReader(new java.io.InputStreamReader(proc.getInputStream()));
+14:       var line = &#39;&#39;;
+15:       var output = &#39;&#39;;
+16:       while ((line = reader.readLine()) != null) {
+17:           output += line;
+18:       }
+19:       return output;
+20:   }
+21: 
+22:   var secretName = config.apiEnvironment + &#39;-ots-rpis-xp-api-okta&#39;;
+23:   var command = &#39;aws secretsmanager get-secret-value --secret-id &#39; + secretName + &#39; --query SecretString --output text&#39;;
+24:   karate.log(&#39;Executing command:&#39;, command);
+25: 
+26:   var oktaCredsJson = execCommand(command);
+27:   karate.log(&#39;Okta credentials JSON:&#39;, oktaCredsJson);
+28: 
+29:   if (!oktaCredsJson) {
+30:       karate.log(&#39;Failed to retrieve Okta secrets from Secrets Manager&#39;);
+31:       throw &#39;Failed to retrieve Okta secrets&#39;;
+32:   }
+33: 
+34:   var oktaCreds = JSON.parse(oktaCredsJson);
+35:   karate.log(&#39;Parsed Okta credentials:&#39;, oktaCreds);
+36: 
+37:   var oktaClientId = oktaCreds[&#39;okta-client-id&#39;];
+38:   var oktaClientSecret = oktaCreds[&#39;okta-client-secret&#39;];
+39:   var oktaTokenUrl = oktaCreds[&#39;okta-token-url&#39;];
+40: 
+41:   var basicAuth = java.util.Base64.getEncoder().encodeToString((oktaClientId + &#39;:&#39; + oktaClientSecret).getBytes(&#39;utf-8&#39;));
+42:   karate.log(&#39;Basic Auth header:&#39;, basicAuth);
+43: 
+44:   var tokenResponse = karate.call(&#39;classpath:karate/okta-auth.feature&#39;, {
+45:       basicAuth: basicAuth,
+46:       oktaTokenUrl: oktaTokenUrl,
+47:       oktaScopes: config.oktaScopes
+48:   });
+49:   karate.log(&#39;Token response:&#39;, tokenResponse);
+50: 
+51:   if (!tokenResponse || !tokenResponse.access_token) {
+52:       karate.log(&#39;Failed to get access token from Okta&#39;);
+53:       throw &#39;Failed to get access token from Okta&#39;;
+54:   }
+55: 
+56:   config.accessToken = tokenResponse.access_token;
+57:   karate.log(&#39;Access token:&#39;, config.accessToken);
+58: 
+59:   karate.configure(&#39;httpClientInstance&#39;, { readTimeout: 60000 });
+60: 
+61:   return config;
+62: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:215)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:1951)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1849)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- &lt;js&gt;.fn(Unnamed:44)
+
+classpath:karate/invoices.feature:4
+classpath:karate/invoices.feature:7
+classpath:karate/invoices.feature:8
+classpath:karate/invoices.feature:9
+classpath:karate/invoices.feature:10
+classpath:karate/invoices.feature:11
+classpath:karate/invoices.feature:12
+classpath:karate/invoices.feature:13
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref failed">14</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>match response[0].amount == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">14:08:00.021 classpath:karate/invoices.feature:14
+* match response[0].amount == &#39;#number&#39;
+&gt;&gt; classpath:karate/invoices.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var config = {
+03:       baseUrl: &#39;https://invoices-rpis.finance-test.cfadevelop.com/&#39;,
+04:       apiEnvironment: &#39;dev&#39;,
+05:       oktaScopes: &#39;fcr-api:read-invoice-suppliers fcr-api:publish-invoice-supplier-entity-types fcr-api:publish-invoice-suppliers&#39;
+06:   };
+07: 
+08:   karate.log(&#39;Initial config:&#39;, config);
+09: 
+10:   function execCommand(command) {
+11:       var proc = java.lang.Runtime.getRuntime().exec(command);
+12:       proc.waitFor();
+13:       var reader = new java.io.BufferedReader(new java.io.InputStreamReader(proc.getInputStream()));
+14:       var line = &#39;&#39;;
+15:       var output = &#39;&#39;;
+16:       while ((line = reader.readLine()) != null) {
+17:           output += line;
+18:       }
+19:       return output;
+20:   }
+21: 
+22:   var secretName = config.apiEnvironment + &#39;-ots-rpis-xp-api-okta&#39;;
+23:   var command = &#39;aws secretsmanager get-secret-value --secret-id &#39; + secretName + &#39; --query SecretString --output text&#39;;
+24:   karate.log(&#39;Executing command:&#39;, command);
+25: 
+26:   var oktaCredsJson = execCommand(command);
+27:   karate.log(&#39;Okta credentials JSON:&#39;, oktaCredsJson);
+28: 
+29:   if (!oktaCredsJson) {
+30:       karate.log(&#39;Failed to retrieve Okta secrets from Secrets Manager&#39;);
+31:       throw &#39;Failed to retrieve Okta secrets&#39;;
+32:   }
+33: 
+34:   var oktaCreds = JSON.parse(oktaCredsJson);
+35:   karate.log(&#39;Parsed Okta credentials:&#39;, oktaCreds);
+36: 
+37:   var oktaClientId = oktaCreds[&#39;okta-client-id&#39;];
+38:   var oktaClientSecret = oktaCreds[&#39;okta-client-secret&#39;];
+39:   var oktaTokenUrl = oktaCreds[&#39;okta-token-url&#39;];
+40: 
+41:   var basicAuth = java.util.Base64.getEncoder().encodeToString((oktaClientId + &#39;:&#39; + oktaClientSecret).getBytes(&#39;utf-8&#39;));
+42:   karate.log(&#39;Basic Auth header:&#39;, basicAuth);
+43: 
+44:   var tokenResponse = karate.call(&#39;classpath:karate/okta-auth.feature&#39;, {
+45:       basicAuth: basicAuth,
+46:       oktaTokenUrl: oktaTokenUrl,
+47:       oktaScopes: config.oktaScopes
+48:   });
+49:   karate.log(&#39;Token response:&#39;, tokenResponse);
+50: 
+51:   if (!tokenResponse || !tokenResponse.access_token) {
+52:       karate.log(&#39;Failed to get access token from Okta&#39;);
+53:       throw &#39;Failed to get access token from Okta&#39;;
+54:   }
+55: 
+56:   config.accessToken = tokenResponse.access_token;
+57:   karate.log(&#39;Access token:&#39;, config.accessToken);
+58: 
+59:   karate.configure(&#39;httpClientInstance&#39;, { readTimeout: 60000 });
+60: 
+61:   return config;
+62: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: http call failed after 72 milliseconds for url: 
+classpath:karate/okta-auth.feature:12
+- com.intuit.karate.core.FeatureResult.getErrorMessagesCombined(FeatureResult.java:215)
+- com.intuit.karate.core.ScenarioEngine.callFeature(ScenarioEngine.java:1951)
+- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1849)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:163)
+- com.intuit.karate.core.ScenarioBridge.call(ScenarioBridge.java:153)
+- &lt;js&gt;.fn(Unnamed:44)
+
+classpath:karate/invoices.feature:4
+classpath:karate/invoices.feature:7
+classpath:karate/invoices.feature:8
+classpath:karate/invoices.feature:9
+classpath:karate/invoices.feature:10
+classpath:karate/invoices.feature:11
+classpath:karate/invoices.feature:12
+classpath:karate/invoices.feature:13
+classpath:karate/invoices.feature:14
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.example.ApiTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.292 s <<< FAILURE! - in com.example.ApiTest
+com.example.ApiTest.testAll  Time elapsed: 0.281 s  <<< ERROR!
+java.lang.RuntimeException: mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+
